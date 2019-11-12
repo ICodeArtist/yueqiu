@@ -1,0 +1,31 @@
+<view class="grace-margin">
+<graceFullLoading 
+  graceFullLoading="{{graceFullLoading}}" 
+  logoUrl="../../static/img/load.png"
+  text="加载中">
+  </graceFullLoading>
+  <view class="grace-card-view" style="margin-top:20px;" wx:for="{{partys}}" wx:key="index">
+    <view class="body">
+      <view class="img">
+        <image src="../../static/img/NBA.png" />
+      </view>
+      <view class="desc">
+        <view class="title">{{item.title}}
+          <text style='margin-left:0'>
+            篮球·<block wx:if="{{item.moshi==1}}">野战</block><block wx:else>内战</block>
+          </text>
+        </view>
+        <view class="text">地址:{{item.place}}</view>
+        <view class="text">开始:{{item.bd}} {{item.bt}}</view>
+      </view>
+    </view>
+    <view class="footer">
+      <view class="grace-icons icon-user" catchtap='tojoin' data-yueid="{{item.id}}">参与者({{item.joinnum}}/{{item.num}})</view>
+      <view class="grace-icons icon-share" catchtap='tojoin' data-yueid="{{item.id}}">分享</view>
+      <view class="grace-icons icon-remove" catchtap='cancel' data-yueid="{{item.id}}" wx:if="{{item.cancancel == 1}}">删除</view>
+    </view>
+  </view>
+  <view wx:if="{{partys.length == 0}}" style="margin-top:50%;">
+    <graceEmpty text="暂无数据" iconType="2" iconColor="#e16531"></graceEmpty>
+  </view>
+</view>

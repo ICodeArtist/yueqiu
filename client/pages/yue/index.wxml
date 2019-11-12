@@ -1,0 +1,71 @@
+<view class="grace-margin">
+<graceFullLoading 
+  graceFullLoading="{{graceFullLoading}}" 
+  logoUrl="../../static/img/load.png"
+  text="发起中">
+  </graceFullLoading>
+  <form bindsubmit="formSubmit" class="grace-form" style="margin-top:25px;">
+    <view class="grace-items">
+      <view class="grace-label">标题</view>
+      <input type="text" class="input" name="title" placeholder="请输入标题"></input>
+    </view>
+    <view class="grace-items">
+      <view class="grace-label">预付</view>
+      <view class="other"><switch bindchange="bindPayChange"/></view>
+    </view>
+    <view class="grace-items"  wx:if="{{ifpay == 1}}">
+      <view class="grace-label">金额</view>
+      <input type="text" class="input" value="{{numberVal }}" disabled bindtap="showKeyboard" placeholder="例:25.93" name="amount" />
+    </view>
+    <view class="grace-items">
+      <view class="grace-label">人数</view>
+      <view class="other">
+        <picker bindchange="bindPickerChange" value="{{num[numIndex]}}" range="{{num}}" name="num">
+          <text>{{num[numIndex]}}</text>
+        </picker>
+      </view>
+    </view>
+    <view class="grace-items">
+      <view class="grace-label">运动当天</view>
+      <view class="other">
+        <picker bindchange="bindDateChange" value="{{dateValue}}" mode="date" name="bd" end="2059-01-01">
+          <text>{{dateValue}}</text>
+        </picker>
+      </view>
+    </view>
+    <view class="grace-items">
+      <view class="grace-label">运动时间</view>
+      <view class="other">
+        <picker bindchange="bindTimeChange" value="{{timeValue}}" mode="time" name="bt" end="23:59:59">
+          <text>{{timeValue}}</text>
+        </picker>
+      </view>
+    </view>
+    <view class="grace-items">
+      <view class="grace-label">打球地点</view>
+      <!-- <view class="other"> -->
+        <input type="text" class="input" name="place" value="{{palce}}" placeholder="" disabled='disabled'></input>
+        <view class="icons grace-icons icon-address grace-yellow" bindtap='bindPlaceChange' style='font-size:40rpx;margin-left:2%; paading:0; flex-shrink:0;color:#e16531'>
+        </view>
+      <!-- </view> -->
+    </view>
+    <view class="grace-items">
+      <view class="grace-label">模式</view>
+      <view class="grace-label-y">
+        <radio-group name="moshi">
+          <label><radio value="1" checked='true'></radio>野球</label>
+          <label><radio value="2"></radio>内战</label>
+        </radio-group>
+      </view>
+    </view>
+    <view style="padding:22rpx 0;">
+      <button formType="submit" type="primary" style="width:100%;">发起约球</button>
+    </view>
+  </form>
+  <graceNumberKeyboard 
+      show="{{graceNumberKeyboardShow}}" 
+      bind:keyboardDone="keyboardDone" 
+      bind:keyboardInput="keyboardInput" 
+      bind:keyboardDelete="keyboardDelete">
+  </graceNumberKeyboard>
+</view>

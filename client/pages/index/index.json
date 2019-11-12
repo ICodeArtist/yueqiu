@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "graceFullLoading": "../../graceUI/components/graceFullLoading",
+    "graceEmpty": "../../graceUI/components/graceEmpty"
+  },
+  "enablePullDownRefresh": true
+}

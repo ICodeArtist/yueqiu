@@ -1,0 +1,27 @@
+<view class="grace-margin">
+<graceFullLoading 
+  graceFullLoading="{{graceFullLoading}}" 
+  logoUrl="../../static/img/load.png"
+  text="加载中">
+  </graceFullLoading>
+  <view class="grace-card-view" wx:for="{{partys}}" wx:key="index">
+    <view class="body" catchtap='godetail' data-yueid="{{item.id}}">
+      <view class="img">
+        <image src="../../static/img/NBA.png" />
+      </view>
+      <view class="desc">
+        <view class="title">{{item.title}}
+          <text style='margin-left:0'>
+            篮球·<block wx:if="{{item.moshi==1}}">野战</block><block wx:else>内战</block>
+          </text>
+        </view>
+        <view class="text">地址:{{item.place}}</view>
+        <view class="text">开始:{{item.bd}} {{item.bt}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{partys.length>0}}">只显示最近5场</view>
+  <view wx:else style="margin-top:50%;">
+  <graceEmpty text="暂无数据" iconType="2" iconColor="#e16531"></graceEmpty>
+  </view>
+</view>

@@ -1,0 +1,51 @@
+<view class="grace-margin">
+  <view class="grace-popover-menu">
+    <!-- 图标形式 请自行添加点击事件 bindtap -->
+    <view class="item grace-icons icon-home grace-bg-red" bindtap="showhome" hidden="{{popmenuShow}}"></view>
+    <button open-type="share" style="padding:0" class="item grace-icons icon-share2 grace-bg-green"  hidden="{{popmenuShow}}"></button>
+    <!-- 主按钮 -->
+    <view class="item grace-icons icon-arrow-up" bindtap="showmenu" style="background:#2FBF79;"></view>
+  </view>
+  <view class="grace-news-list" style="margin-top:10px;">
+    <view class="">
+      <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="15" markers="{{markers}}" bindmarkertap="markertap" show-location></map>
+    </view>
+  </view>
+  <view class="grace-list" style="margin-top:3px;">
+    <view class="items" style="box-shadow: 0px 0px 8px #E6E7E9;">
+      <view class="icons ucenter-face">
+        <image src="../../static/img/NBA.png" mode="widthFix"></image>
+      </view>
+      <view class="body" style='width:60%;padding-top:0'>
+        <view class="title" wx:if="{{yueinfo.moshi==1}}">{{yueinfo.title}}（篮球·野战）</view>
+        <view class="title" wx:else>{{yueinfo.title}}（篮球·内战）</view>
+        <view class="desc">{{yueinfo.place}}</view>
+        <view class="desc">{{yueinfo.bd}} {{yueinfo.bt}} 参与({{yueinfo.joinnum}}/{{yueinfo.num}})</view>
+        <view class="grace-product-price">￥{{yueinfo.amount}}</view>
+      </view>
+      <view class="">
+        <button type="primary" class="grace-gtbg-green" catchtap='go' data-yueid="{{yueid}}">加入</button>
+        <!-- 右上角分享 -->
+      </view>
+    </view>
+  </view>
+  <view class="grace-comments">
+    <view class="items grace-card-view" wx:for="{{join}}" wx:key="index">
+      <view class="face">
+        <image src="{{item.avatarUrl}}" mode="widthFix"></image>
+      </view>
+      <view>
+        <view class="header">
+          <!-- <text> -->
+            {{item.nickName}}  
+          <!-- </text> -->
+          <image src="../../static/honor/level{{item.level}}.png"></image>
+        </view>
+        <view class="info">
+          <text>{{item.create_time}}</text>
+        </view>
+      </view>
+      <!-- <view><image src="../../static/honor/level{{item.level}}.png"></image></view> -->
+    </view>
+  </view>
+</view>

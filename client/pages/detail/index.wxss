@@ -1,0 +1,32 @@
+/* pages/history/detail/index.wxss */
+page{background:url(http://qn.orianna.top/lqc1.jpeg) no-repeat #E5E5E5; background-size:100% auto;}
+.ranking-list{width:700rpx; margin-left:25rpx; background:#FFFFFF; border-radius:10px;}
+.header-msg{display:flex; padding:30rpx 0; margin:0 30rpx;  border-bottom:10rpx solid #E5E5E5; flex-direction:row; flex-wrap:nowrap; justify-content:center; align-items:center;}
+.header-msg-text{width:220rpx; line-height:80rpx; font-size:28rpx; text-align:center; color:#666666;}
+.header-msg-text text{font-size:36rpx; margin:0 8px; font-weight:bold; color:#666666;}
+.header-msg-face{width:150rpx; height:150rpx; margin:0 30rpx; border:6rpx solid #E5E5E5; border-radius:120rpx;}
+.header-msg-face image{width:140rpx; height:140rpx; margin:5rpx; border-radius:120rpx;}
+.ranking-lists{padding:20rpx 30rpx;}
+.ranking-lists .item{display:flex; padding:30rpx; flex-direction:row; flex-wrap:nowrap; align-items:center;}
+.ranking-lists .item .num{width:60rpx; line-height:80rpx; font-size:50rpx; color:#666666; font-weight:bold; font-style:italic;}
+.ranking-lists .item .face{width:100rpx; height:100rpx; margin:0 20rpx; border:8rpx solid #E5E5E5; border-radius:100rpx;}
+.ranking-lists .item .face image{width:100rpx; height:100rpx; border-radius:100rpx;}
+.ranking-lists .item .text{font-size:30rpx; line-height:50rpx; width:700rpx; flex:1; margin-left:10rpx; color:#666666;}
+.ranking-lists .item .text text{color:#999999;}
+.ranking-lists .zan{width:80rpx; height:80rpx; color:#999999; font-size:22rpx; text-align:center;}
+.ranking-lists .zan .grace-icons{font-size:50rpx; color:#999999;}
+.zan-active{color:#FF9B00 !important;}
+.bgF5{background:#F5F5F5 !important;}
+.first{
+  color:#FF0036 !important;
+}
+.second{
+  color:#FF9B00 !important;
+}
+.thrid{
+  color:#FFCC00 !important;
+}
+image{
+  width: 32rpx;
+  height: 32rpx;
+}

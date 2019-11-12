@@ -1,0 +1,53 @@
+<view class="grace-margin">
+  <view class="grace-list" style="margin-top:3px;">
+    <view class="items">
+      <view class="icons ucenter-face" style="border-radius:88rpx">
+        <open-data type="userAvatarUrl" ></open-data>
+      </view>
+      <view class="body">
+        <view class="title">
+          <open-data type="userNickName"></open-data>
+          <image src="../../static/honor/level{{level}}.png"></image>
+      </view>
+        </view>
+    </view>
+  </view>
+</view>
+<view class="ucenter-line"></view>
+<view class="grace-margin">
+  <view class="grace-list">
+    <view class="items">
+      徽章墙即将开放......
+      <!-- <image src="../../static/honor/honor1.png"></image>
+      <image src="../../static/honor/honor2.png"></image>
+      <image src="../../static/honor/honor3.png"></image>
+      <image src="../../static/honor/honor4.png"></image>
+      <image src="../../static/honor/honor5.png"></image>
+      <image src="../../static/honor/honor6.png"></image>
+      <image src="../../static/honor/honor7.png"></image> -->
+    </view>
+    <view class="ucenter-line"></view>
+    <navigator class="items" url="../history/index">
+      <view class="icons grace-icons icon-time grace-gray"></view>
+      <view class="body">
+        <view class="title">历史约球</view>
+      </view>
+      <view class="arrow-right"></view>
+    </navigator>
+    <navigator class="items">
+      <view class="icons grace-icons icon-star grace-blue"></view>
+      <view class="body">
+        <view class="title">兑换徽章(正在开发)</view>
+      </view>
+      <view class="arrow-right"></view>
+    </navigator>
+    <navigator class="items">
+      <view class="icons grace-icons icon-eye grace-green"></view>
+      <view class="body">
+        <view class="title">我的数据(正在开发)</view>
+      </view>
+      <view class="arrow-right"></view>
+    </navigator>
+  </view>
+</view>
+<view class="ucenter-line"></view>

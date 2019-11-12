@@ -1,0 +1,19 @@
+<view>
+  <view style="height:360rpx;"></view>
+  <view class="ranking-list">
+    <!-- 排行列表 -->
+    <view class="ranking-lists">
+      <view class="item {{index%2 == 0?'':'bgF5'}}" wx:for="{{join}}" wx:key="index">
+        <view class="num {{index == 0?'first':index == 1?'second':index == 2?'thrid':''}}">{{index+1}}</view>
+        <view class="face"><image src="{{item.avatarUrl}}" mode="widthFix"></image></view>
+        <view class="text">{{item.nickName}}<image src="../../static/honor/level{{item.level}}.png"></image></view>
+        <view class="zan">
+          <text wx:if="{{item.ifz == 1}}" class="grace-icons icon-star zan-active"></text>
+          <text wx:else class="grace-icons icon-star" catchtap="goz" data-id="{{item.id}}"></text>
+          <text>\n{{item.znum}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="height:80rpx;"></view>
+</view>

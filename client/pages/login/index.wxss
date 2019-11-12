@@ -1,0 +1,15 @@
+/* pages/login/index.wxss */
+@import "../../graceUI/animate.wxss";
+.avatar{
+  width: 500rpx;
+  height: 500rpx;
+  clip-path: circle(200rpx at center);
+  margin-left: 15%;
+}
+page{
+  background-color: rgba(219, 219, 219, 0.39);
+}
+.heartBeat{
+  animation:heartBeat 3s linear;
+  text-align: center;
+}

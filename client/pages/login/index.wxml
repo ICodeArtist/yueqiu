@@ -1,0 +1,11 @@
+<view class="grace-margin">
+  <view style="margin-top:50px;" class="grace-center">
+    <view class='avatar heartBeat'>
+      <open-data type="userAvatarUrl" ></open-data>
+    </view>
+  </view>
+  <button wx:if="{{canIUse && canlogin}}" type='primary' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" style='margin-top:30px;'>
+    登录 <text class="grace-icons icon-arrow-right"></text>
+  </button>
+  <view class="grace-gray grace-h3 grace-animate heartBeat" wx:else>登陆中......</view>
+</view>
